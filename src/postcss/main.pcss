@@ -1,3 +1,43 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('./base');
+
+nav {
+  @apply .bg-white;
+}
+
+body {
+  @apply .bg-gray-300;
+}
+
+main {
+  @apply .bg-gray-400;
+}
+
+.loading-screen {
+  @apply .w-screen .h-screen .bg-indigo-400 .flex .flex-col .justify-center .items-center;
+}
+
+.loading {
+  @apply .flex .justify-center .uppercase;
+}
+
+.fade-appear {
+  opacity: 0;
+}
+.fade-appear-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
