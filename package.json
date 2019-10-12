@@ -30,6 +30,7 @@
   ],
   "scripts": {
     "dev": "parcel public/index.html",
+    "build": "parcel build --no-source-maps public/index.html",
     "test": "mocha -r @babel/register"
   },
   "babel": {
@@ -40,8 +41,8 @@
   },
   "postcss": {
     "plugins": [
-      "postcss-nested",
       "tailwindcss",
+      "postcss-nested",
       "autoprefixer"
     ]
   }
