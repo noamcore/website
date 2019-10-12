@@ -10,10 +10,7 @@ export default function Home() {
       <Nav />
       <div className="container mx-auto px-6">
         <main>
-          <p className="presentation">
-            Olá, meu nome é Iago. Desenvolvedor há 5 anos, busco constante aprimoramento e muito
-            dota.
-          </p>
+          <p className="presentation">Presentation</p>
           <Card title="Tecnologias atuais">
             <ul>
               <li>React</li>
