@@ -1,24 +1,38 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-const Nav = React.lazy(() => import('../components/Nav'))
-const Footer = React.lazy(() => import('../components/Footer'))
+import Nav from '../components/Nav'
+import Card from '../components/Card'
+import Footer from '../components/Footer'
 
-export default () => {
+export default function Home() {
   return (
     <>
-      <React.Suspense fallback={<h1>Loading</h1>}>
-        <Nav />
-        <main>Portifólio pessoal</main>
-        <li>
-          <ul>Elixir</ul>
-          <ul>React</ul>
-          <ul>Vue</ul>
-          <ul>Rust</ul>
-        </li>
-        <Link to="/about">ir para about</Link>
+      <Nav />
+      <div className="container mx-auto px-6">
+        <main>
+          <p className="presentation">
+            Olá, meu nome é Iago. Desenvolvedor há 5 anos, busco constante aprimoramento e muito
+            dota.
+          </p>
+          <Card title="Tecnologias atuais">
+            <ul>
+              <li>React</li>
+              <li>Elixir</li>
+              <li>Rust</li>
+            </ul>
+          </Card>
+          <Card title="Stack atual">
+            <ul>
+              <li>Docker</li>
+              <li>ConcourseCI</li>
+              <li>Ubuntu</li>
+              <li>AWS</li>
+              <li>Google Cloud</li>
+            </ul>
+          </Card>
+        </main>
         <Footer />
-      </React.Suspense>
+      </div>
     </>
   )
 }
